@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Погода</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">ЛОГО</div>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="moscow.html">Погода</a>
+            <a href="app.html">Наше приложение</a>
+        </nav>
+    </header>
+
+    <main class="moscow-page main">
+        <section class="weather-container">
+            <div class="search-box">
+                <h2>Выберите город</h2>
+                <input type="text" id="city-input" placeholder="Введите город">
+                <button onclick="getWeather()">Показать</button>
+    
+                <div class="weather-details">
+                    <div class="weather-icon">
+                        <img id="weather-icon-img" src="default-icon.png" alt="">
+                    </div>
+                    <p id="temperature">--°C</p>
+                    <p id="humidity">Влажность: --%</p>
+                    <p id="wind">Ветер: -- м/с</p>
+                    <p id="feels-like">Ощущается как: --°C</p>
+                    <p id="pressure">Давление: -- мм рт. ст.</p>
+                </div>
+            </div>
+    
+            <div id="forecast-container" class="current-weather">
+                <h2>Прогноз на 3 дня</h2>
+                <div id="weekly-forecast" class="weekly-forecast"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Email: isp.e.a.zubkova@mpt.ru</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
